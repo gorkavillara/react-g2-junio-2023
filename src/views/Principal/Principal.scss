@@ -1,0 +1,11 @@
+.principal {
+    color: rgb(160, 248, 160);
+
+    h2 {
+        font-size: 3rem;
+
+        &:hover {
+            text-shadow: 0 0 2rem red;
+        }
+    }
+}

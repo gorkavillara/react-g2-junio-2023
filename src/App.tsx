@@ -1,12 +1,10 @@
 import "./App.css"
-import { Principal, EstilosCondicionales, Listas } from "./views"
+import { Formularios } from "./views"
 
 function App() {
   return (
     <>
-      {/* <Principal /> */}
-      {/* <EstilosCondicionales /> */}
-      <Listas />
+      <Formularios />
     </>
   )
 }

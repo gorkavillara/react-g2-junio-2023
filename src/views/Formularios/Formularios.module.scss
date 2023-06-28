@@ -1,0 +1,14 @@
+.Formularios {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        input {
+            padding: 0.5rem;
+            transition: all 0.3s;
+            &:focus {
+                box-shadow: 0 0 2rem rgba(200, 200, 200, 0.5);
+            }
+        }
+    }
+}

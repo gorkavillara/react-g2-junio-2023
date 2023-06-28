@@ -5,6 +5,8 @@ interface Alumno {
   nota: number
 }
 
+const copiado = Math.random() > 0.5
+
 const alumnos: Alumno[] = [
   {
     id: 1,
@@ -27,7 +29,7 @@ const alumnos: Alumno[] = [
   {
     id: 4,
     nombre: "Charly",
-    nota: 6,
+    nota: copiado ? 3 : 6.2,
     email: "charly@koch.com",
   },
 ]

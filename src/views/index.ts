@@ -1,5 +1,6 @@
 import EstilosCondicionales from "./EstilosCondicionales/EstilosCondicionales";
 import Listas from "./Listas/Listas";
+import DetallesUsuario from "./DetallesUsuario/DetallesUsuario";
 import Formularios from "./Formularios/Formularios";
 import FormularioFormik from "./Formularios/FormularioFormik";
 import Principal from "./Principal";
@@ -9,5 +10,6 @@ export {
     Principal,
     Listas,
     Formularios,
-    FormularioFormik
+    FormularioFormik,
+    DetallesUsuario
 }

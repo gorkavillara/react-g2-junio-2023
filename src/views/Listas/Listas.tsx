@@ -1,53 +1,22 @@
-interface Alumno {
-  id: number
-  nombre: string
-  email: string
-  nota: number
-}
-
-const copiado = Math.random() > 0.5
-
-const alumnos: Alumno[] = [
-  {
-    id: 1,
-    nombre: "Alex Ramos",
-    nota: 5.0,
-    email: "alejandro@ramos.com",
-  },
-  {
-    id: 2,
-    nombre: "Juan Carlos Iglesias",
-    nota: 3,
-    email: "juancarlos@iglesias.com",
-  },
-  {
-    id: 3,
-    nombre: "Álvaro Girona",
-    nota: -5.0,
-    email: "alvaro@girona.com",
-  },
-  {
-    id: 4,
-    nombre: "Charly",
-    nota: copiado ? 3 : 6.2,
-    email: "charly@koch.com",
-  },
-]
+import { Link } from "react-router-dom"
+import alumnos from "../../assets/alumnos"
 
 const Listas = () => {
   return (
     <div>
       <h2>Lista de alumnos</h2>
       <ul>
-        {alumnos.map((alumno, index) => {
+        {alumnos.map((alumno) => {
           // hacemos nuestros cálculos
           return (
             <li key={alumno.id}>
-              <span>Nombre: {alumno.nombre}</span>
-              <span> - </span>
-              <span>Email: {alumno.email}</span>
-              <span> - </span>
-              <span>Nota: {alumno.nota}</span>
+              <Link to={`/alumnos/${alumno.id}`}>
+                <span>Nombre: {alumno.nombre}</span>
+                <span> - </span>
+                <span>Email: {alumno.email}</span>
+                <span> - </span>
+                <span>Nota: {alumno.nota}</span>
+              </Link>
             </li>
           )
         })}

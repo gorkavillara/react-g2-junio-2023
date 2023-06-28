@@ -13,6 +13,8 @@ const Formularios = () => {
     // javascript:void(0) //eslint-disable-line
     event.preventDefault()
     console.log(formData)
+    // validaciones personalizadas
+    if (formData.email.length < 4) return false
   }
 
   return (

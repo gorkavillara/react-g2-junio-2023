@@ -1,10 +1,10 @@
 import "./App.css"
-import { Formularios } from "./views"
+import { FormularioFormik } from "./views"
 
 function App() {
   return (
     <>
-      <Formularios />
+      <FormularioFormik />
     </>
   )
 }

@@ -1,21 +1,16 @@
-import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import App from './App.tsx'
 import './index.css'
 import routes from './routes'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
+import { Provider } from "react-redux"
+import { store } from './app/store'
 
 const router = createBrowserRouter(routes)
 
-const queryClient = new QueryClient()
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <QueryClientProvider client={queryClient}>
+  <Provider store={store}>
     <RouterProvider router={router} />
-    <ReactQueryDevtools />
-  </QueryClientProvider>
+  </Provider>
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>,

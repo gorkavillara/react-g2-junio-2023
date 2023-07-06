@@ -1,10 +1,11 @@
 import "./App.scss"
-import RickMorty from "./views/RickMorty/RickMorty"
+import Contador from "./views/Contador/Contador"
 
 function App() {
   return (
     <>
-      <RickMorty />
+      <Contador />
+      <Contador />
     </>
   )
 }

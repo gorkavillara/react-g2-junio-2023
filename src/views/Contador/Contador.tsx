@@ -1,12 +1,13 @@
-import useContador from "../../hooks/useContador"
+import { useContext } from "react"
+import { ContadorContext } from "../../contexts/ContadorContextProvider"
 
 const Contador = () => {
-  const { contador, incrementaCinco, incrementaContador } = useContador()
+  const { contador, hazLlamadaEIncrementa, isLoading } = useContext(ContadorContext)
   return (
     <div>
+      {isLoading && <p>Está cargando...</p>}
       <h2>Valor del contador: {contador}</h2>
-      <button onClick={incrementaContador}>Incrementa</button>
-      <button onClick={incrementaCinco}>Incrementa 5</button>
+      <button onClick={hazLlamadaEIncrementa} disabled={isLoading}>Incrementa</button>
     </div>
   )
 }

@@ -1,19 +1,9 @@
-import "./App.scss"
-import Tareas from "./views/Tareas/Tareas"
-import TareasContextProvider from "./contexts/TareasContextProvider"
-import ContadorContextProvider from "./contexts/ContadorContextProvider"
-import Contador from "./views/Contador/Contador"
+import Bootstrap from "./views/Bootstrap/Bootstrap"
 
 function App() {
   return (
     <>
-      <TareasContextProvider>
-        <Tareas />
-      </TareasContextProvider>
-      <ContadorContextProvider>
-        <Contador />
-        <Contador />
-      </ContadorContextProvider>
+      <Bootstrap />
     </>
   )
 }

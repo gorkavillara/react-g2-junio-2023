@@ -1,9 +1,9 @@
-import Bootstrap from "./views/Bootstrap/Bootstrap"
+import Mui from "./views/Mui/Mui"
 
 function App() {
   return (
     <>
-      <Bootstrap />
+      <Mui />
     </>
   )
 }

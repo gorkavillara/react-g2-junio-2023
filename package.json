@@ -11,6 +11,9 @@
   },
   "dependencies": {
     "@cake-hub/lidl-web-bootstrap_theme": "^6.12.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.7",
     "@reduxjs/toolkit": "^1.9.5",
     "@tanstack/react-query": "^4.29.19",
     "@tanstack/react-query-devtools": "^4.29.19",

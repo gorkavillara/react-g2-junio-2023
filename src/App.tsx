@@ -1,6 +1,7 @@
 import { useState } from "react"
 import axios from "axios"
 import "./App.scss"
+import { authInstance, rmInstance } from "./assets/instances"
 
 const baseUrl = "https://rickandmortyapi.com/api/character/"
 
@@ -32,10 +33,21 @@ function App() {
     // } catch (e) {
       // window.alert("Error!")
     // }
-    axios.get(url)
-      .then(res => setPersonaje(res.data))
+    // const token = "98f293jfjf-2f-92-fj-239f2399jf29210fj2-3f329f"
+    // axios.get(url)
+    rmInstance("id")
+      .then(res => {
+        console.log(res.data)
+        setPersonaje(res.data)
+      })
       .catch(error => console.error(error))
       .finally(() => console.log("Llamada finalizada"))
+  }
+
+  const autentica = () => {
+    authInstance.post("", { email: "prueba@gmail.com", password: "123456789" })
+      .then(console.log)
+      .catch(console.error)
   }
   return (
     <>
@@ -48,6 +60,7 @@ function App() {
         />
         <button onClick={buscaIdFetch}>Buscar</button>
         <button onClick={buscaIdAxios}>Axios</button>
+        <button onClick={autentica}>Auth</button>
       </div>
       {personaje && (
         <>

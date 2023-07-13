@@ -6,11 +6,6 @@ import Box from "@mui/material/Box";
 const Mui = () => {
   return (
     <Box>
-      <Button variant="contained" disableElevation>
-        Disable elevation
-      </Button>
-      <AlertDialog />
-      <Typography variant="h3">Hola mundo</Typography>
     </Box>
   )
 }

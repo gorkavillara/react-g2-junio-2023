@@ -1,10 +1,9 @@
-import Dashboard from "./views/Mui/Dashboard"
-import Mui from "./views/Mui/Mui"
+import "./App.scss"
 
 function App() {
   return (
     <>
-      <Dashboard />
+      App
     </>
   )
 }

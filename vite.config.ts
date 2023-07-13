@@ -1,5 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+/// <reference types="vitest" />
+/// <reference types="vite/client" />
+
+import { defineConfig } from "vite"
+import react from "@vitejs/plugin-react"
 
 const getOutDir = (mode: string) => {
   if (mode === "production") return "build-prod"
@@ -11,6 +14,18 @@ const getOutDir = (mode: string) => {
 export default defineConfig(({ mode }) => ({
   plugins: [react()],
   build: {
-    outDir: getOutDir(mode)
-  }
+    outDir: getOutDir(mode),
+  },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./src/test/setup.ts",
+    // you might want to disable it, if you don't have tests that rely on CSS
+    // since parsing CSS is slow
+    css: true,
+    coverage: {
+      provider: "v8",
+      reporter: ["html", "text"]
+    },
+  },
 }))

@@ -30,7 +30,7 @@ const Contador = () => {
   return (
     <div>
       <h2>Contador</h2>
-      <button onClick={() => setToggle((prev) => !prev)}>
+      <button role="toggle-button" onClick={() => setToggle((prev) => !prev)}>
         {toggle ? "On" : "Off"}
       </button>
       <Monitor contador={dobleContador} />

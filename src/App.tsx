@@ -1,5 +1,6 @@
 import "./App.scss"
 import Contador from "./views/Contador/Contador"
+import RickMorty from "./views/RickMorty/RickMorty"
 
 // const log = (msg: string) => {
 //   if (import.meta.env.MODE === "production") return
@@ -8,14 +9,10 @@ import Contador from "./views/Contador/Contador"
 // }
 
 function App() {
-  const entorno = import.meta.env.MODE
-
   return (
     <>
-      <h2>{import.meta.env.VITE_APP_NAME}</h2>
       <Contador />
-      <p>Entorno: {entorno}</p>
-      <p>Api URL: {import.meta.env.VITE_API_URL}</p>
+      <RickMorty />
     </>
   )
 }

@@ -3,10 +3,10 @@ import Monitor from "./Monitor"
 import Controles from "./Controles"
 
 const obtenDoble = (numero: number) => {
-  let suma = 0
-  for (let i = 0; i < 123456789; i++) {
-    suma++
-  }
+  // let suma = 0
+  // for (let i = 0; i < 123456789; i++) {
+  //   suma++
+  // }
   return numero * 2
 }
 

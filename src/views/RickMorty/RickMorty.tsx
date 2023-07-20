@@ -2,13 +2,13 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 
 const RickMorty = () => {
-  const [character, setCharacter] = useState<any>(null)
+  const [character, setCharacter] = useState<null | { name: string }>(null)
   useEffect(() => {
     axios
       .get("https://rickandmortyapi.com/api/character/2")
       .then((res) => setCharacter(res.data))
       .catch(console.error)
-      
+
   }, [])
   return (
     <div>

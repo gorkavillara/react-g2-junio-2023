@@ -1,0 +1,31 @@
+$font-color: #091227;
+button.Button {
+    align-items: center;
+    background-color: transparent;
+    color: $font-color;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 1rem;
+  }
+  
+  button.Button:before {
+    background-color: $font-color;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-right: 10px;
+    transition: all .42s cubic-bezier(.25,.8,.25,1);
+    width: 0;
+  }
+  
+  button.Button:hover:before {
+    background-color: $font-color;
+    width: 3rem;
+  }

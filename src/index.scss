@@ -1,0 +1,114 @@
+$font-color: #091227;
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+/* Estilos generales */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #b5c3c8;
+    color: $font-color;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+/* Estilos para el topbar */
+.topbar {
+    background: #f1f1f1;
+    min-height: 60px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: $font-color;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+/* Estilos para el sidebar */
+.sidebar {
+    background: #f1f1f1;
+    min-width: 200px;
+    padding: 20px;
+    color: $font-color;
+    border-radius: 10px;
+}
+
+/* Estilos para la sección principal */
+.main-section {
+    flex-grow: 1;
+    padding: 0;
+    display: flex;
+}
+
+/* Estilos para el contenido */
+.content {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Estilos para el modo oscuro del contenido */
+.content.dark-mode {
+    background-color: #555;
+    color: #f1f1f1;
+}
+
+ul.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+
+    a {
+        color: $font-color;
+        text-decoration: none;
+        border-radius: 2rem;
+
+        &.active {
+            background-color: lighten($font-color, 75%);
+            box-shadow: 0 0 1rem lighten($font-color, 50%);
+        }
+    }
+}
+
+ul.links li {
+    list-style: none;
+    padding: 0.75rem 1rem;
+    border-radius: 2rem;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+ul.links li:hover {
+    background-color: $font-color;
+    color: white;
+}
+
+/* Estilos para la barra lateral en el modo responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}

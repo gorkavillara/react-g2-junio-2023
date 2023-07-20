@@ -1,0 +1,14 @@
+.TablaClientes {
+    width: 100%;
+    .Cliente {
+        width: 100%;
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+
+        &.Par {
+            background-color: rgb(211, 230, 230);
+        }
+    }
+}

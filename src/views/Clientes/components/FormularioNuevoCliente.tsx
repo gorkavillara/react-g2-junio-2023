@@ -7,7 +7,7 @@ const FormularioNuevoCliente = () => {
         id: 0,
         age: 0,
         email: "",
-        nombre: "",
+        nombre: ""
     })
     const altaCliente = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()

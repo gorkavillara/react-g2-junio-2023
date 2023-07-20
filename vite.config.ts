@@ -5,7 +5,7 @@ import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
 
 const getOutDir = (mode: string) => {
-  if (mode === "production") return "build-prod"
+  if (mode === "production") return "dist"
   if (mode === "stg") return "build-stg"
   return "build"
 }

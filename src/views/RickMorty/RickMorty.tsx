@@ -8,6 +8,7 @@ const RickMorty = () => {
       .get("https://rickandmortyapi.com/api/character/2")
       .then((res) => setCharacter(res.data))
       .catch(console.error)
+      
   }, [])
   return (
     <div>

@@ -16,7 +16,7 @@ const Juego = () => {
         const endTime = new Date()
         setTiempo((endTime.getTime() - startTime.getTime()) / 1000)
         alert("Has ganado!")
-    }, [fraseEscrita])
+    }, [fraseEscrita, fraseObjetivo, startTime])
 
     const escribeFrase = (event: React.KeyboardEvent<HTMLInputElement>) => {
         // console.log(event.key)
